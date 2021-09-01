@@ -1,0 +1,574 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+*:before, *:after, * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+footer .final-footer .firma-footer, footer .final-footer .volver-arriba, footer .div-redes a i, footer .titulo-footer, footer {
+  padding: 0.5rem;
+}
+
+/* Importo fuentes API Google */
+:root {
+  --hh: 7.63rem;
+  --hhaux: var(--hh);
+}
+@media only screen and (min-width: 768px) and (max-width: 991.999px) {
+  :root {
+    --hh: 6.63rem;
+    --hhaux: var(--hh);
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.999px) {
+  :root {
+    --hh: 5.68rem;
+    --hhaux: var(--hh);
+  }
+}
+@media only screen and (max-width: 575.999px) {
+  :root {
+    --hh: 5.63rem;
+    --hhaux: 15.63rem;
+  }
+}
+
+/* Reseteo css por default del HTML */
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: #5d1c22;
+  /* Esta me pareció la mejor manera de tener el footer abajo de todo
+  y que queden todos los html dinámicos: */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: -10;
+  /* Reseteo estética de los enlaces */
+  /* Seteo algunos estilos generales de las main sections */
+}
+html body a {
+  color: inherit;
+  text-decoration: none;
+}
+html body p {
+  /* Esto lo hago para pisar estilos de Bootstrap */
+  margin: 0;
+}
+html body main {
+  background-image: url("../images/fondos/patron1_light_2.png");
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding: 0 0 0.5rem;
+}
+html body main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html body main section h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.5rem;
+  color: black;
+  letter-spacing: 0.2rem;
+  padding: 1.5rem 0 0.75rem;
+  /* Culpa de Bootstrap */
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  line-height: inherit;
+}
+@media only screen and (max-width: 767.999px) {
+  html body main section h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+/* Empieza estilos header */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 0.5rem 1rem;
+}
+.navbar .navbar-brand-custom {
+  margin-right: 0;
+}
+.navbar .navbar-brand-custom .img-logo {
+  width: 6rem;
+  border-radius: 100%;
+  transition: transform 1s;
+  transition-timing-function: linear;
+  margin-left: 0.75rem;
+}
+.navbar .navbar-brand-custom .img-logo:hover {
+  transform: rotate(360deg);
+}
+@media only screen and (min-width: 768px) and (max-width: 991.999px) {
+  .navbar .navbar-brand-custom .img-logo {
+    width: 5rem;
+  }
+}
+@media only screen and (max-width: 767.999px) {
+  .navbar .navbar-brand-custom .img-logo {
+    width: 4rem;
+    margin-left: 0.25rem;
+  }
+}
+.navbar button {
+  color: #f3be4f;
+}
+.navbar button i {
+  font-size: 2rem;
+  color: #f3be4f;
+}
+.navbar button:hover {
+  color: #c94955;
+}
+.navbar button:hover i {
+  color: #c94955;
+}
+.navbar .navbar-collapse-custom {
+  flex-grow: 0;
+}
+.navbar .navbar-collapse-custom ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-family: "Bangers", cursive;
+  /* Hay muchos seteos que tengo que forzarlos por culpa de Bootstrap */
+  padding-left: 0;
+  padding-inline-start: 0;
+  margin-bottom: 0;
+}
+.navbar .navbar-collapse-custom .lista-nav li {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem 1rem;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  width: min-content;
+}
+.navbar .navbar-collapse-custom .lista-nav li:hover {
+  transform: scale(1.25);
+}
+.navbar .navbar-collapse-custom .lista-nav li:hover ul {
+  display: block;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.999px) {
+  .navbar .navbar-collapse-custom .lista-nav li {
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+    padding: 0.375rem 0.75rem;
+  }
+}
+@media only screen and (max-width: 767.999px) {
+  .navbar .navbar-collapse-custom .lista-nav li {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+@media only screen and (max-width: 575.999px) {
+  .navbar .navbar-collapse-custom .lista-nav li {
+    margin-left: 0.5rem;
+  }
+}
+.navbar .navbar-collapse-custom .lista-nav li a {
+  color: #f3be4f;
+  padding: 0;
+}
+.navbar .navbar-collapse-custom .lista-nav li a:hover {
+  color: #c94955;
+}
+.navbar .navbar-collapse-custom .lista-nav li ul {
+  display: none;
+  position: absolute;
+}
+.navbar .navbar-collapse-custom .lista-nav li ul li {
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  font-size: 1.2rem;
+  min-width: 18.5rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991.999px) {
+  .navbar .navbar-collapse-custom .lista-nav li ul li {
+    font-size: 0.8004rem;
+    min-width: 13rem;
+  }
+}
+@media only screen and (max-width: 767.999px) {
+  .navbar .navbar-collapse-custom .lista-nav li ul li {
+    font-size: 0.6rem;
+    min-width: 9.5rem;
+    padding: 0.25rem;
+  }
+}
+@media only screen and (max-width: 575.999px) {
+  .navbar .navbar-collapse-custom .lista-nav li ul li {
+    position: relative;
+    top: -1rem;
+    left: 2.75rem;
+  }
+}
+
+/* Finaliza estilos header */
+/* Empieza estilos footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #f3be4f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .titulo-footer {
+  font-family: "Bangers", cursive;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+@media only screen and (max-width: 767.999px) {
+  footer .titulo-footer {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+}
+footer .div-redes a i {
+  font-size: 2.5rem;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+@media only screen and (max-width: 767.999px) {
+  footer .div-redes a i {
+    font-size: 1.5rem;
+  }
+}
+footer .div-redes a i:hover {
+  color: #c94955;
+  transform: scale(1.25);
+}
+footer .final-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+footer .final-footer .volver-arriba {
+  right: 1rem;
+  border-radius: 50%;
+  width: fit-content;
+}
+footer .final-footer .volver-arriba a {
+  font-size: 0;
+}
+footer .final-footer .volver-arriba i {
+  font-size: 2rem;
+}
+@media only screen and (max-width: 767.999px) {
+  footer .final-footer .volver-arriba i {
+    font-size: 1.5rem;
+  }
+}
+footer .final-footer .volver-arriba i:hover {
+  color: #c94955;
+  transform: scale(1.25);
+}
+footer .final-footer .firma-footer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+}
+
+/* Finaliza estilos footer */
+/* Empieza estilos de las sections de index.html */
+main .portada {
+  background-color: #020204;
+  padding: 0;
+}
+main .portada .img-portada {
+  /* max-width: 100%; */
+  min-height: calc(320px / 1.873);
+  max-height: calc(100vh - var(--hh));
+}
+@media only screen and (orientation: portrait) {
+  main .portada .img-portrait {
+    display: block;
+  }
+  main .portada .img-landscape {
+    display: none;
+  }
+}
+@media only screen and (orientation: landscape) {
+  main .portada .img-portrait {
+    display: none;
+  }
+  main .portada .img-landscape {
+    display: block;
+  }
+}
+main .portada .carousel-inner {
+  position: relative;
+}
+main .portada .carousel-inner h1 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-family: "Bangers", cursive;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+@media only screen and (orientation: landscape) {
+  main .portada .carousel-inner h1 {
+    left: 14vw;
+  }
+}
+@media only screen and (orientation: portrait) {
+  main .portada .carousel-inner h1 {
+    left: 4vw;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.999px) {
+  main .portada .carousel-inner h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+    bottom: 0.75rem;
+  }
+}
+@media only screen and (max-width: 767.999px) {
+  main .portada .carousel-inner h1 {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    bottom: 0.5rem;
+  }
+}
+main .video-ult-lanzamiento {
+  max-height: calc((100vh - var(--hh)) - 5.5rem);
+  min-height: calc((320px * 0.9) / 1.778);
+}
+@media only screen and (max-width: 575.999px) {
+  main .video-ult-lanzamiento {
+    max-height: calc((100vh - var(--hh)) - 4rem);
+  }
+}
+@media only screen and (orientation: portrait) {
+  main .video-ult-lanzamiento {
+    max-width: 90vw;
+    height: calc(90vw / 1.778);
+  }
+}
+@media only screen and (orientation: landscape) {
+  main .video-ult-lanzamiento {
+    max-width: 70vw;
+    height: calc(70vw / 1.778);
+  }
+}
+main #myagenda {
+  /* Esto es para que al utilizar los enlaces del nav 
+  no me quede contenido bajo el header fixed */
+  position: relative;
+  bottom: var(--hh);
+}
+main #myagenda-aux {
+  /* Esto es para que al utilizar los enlaces del nav 
+  no me quede contenido bajo el header fixed */
+  position: relative;
+  bottom: var(--hhaux);
+}
+main .panel-agenda {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+main .panel-agenda .sub-panel-agenda {
+  display: flex;
+  flex-direction: column;
+  max-width: calc((60vh - 5.5rem)/ 1.25);
+  min-width: 18vw;
+  /* width: 25vw; */
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1rem;
+  margin: 0 1rem 1rem;
+  border-radius: 1rem;
+}
+main .panel-agenda .sub-panel-agenda img,
+main .panel-agenda .sub-panel-agenda iframe {
+  width: 100%;
+}
+@media only screen and (min-width: 576px) and (max-width: 991.999px) {
+  main .panel-agenda .sub-panel-agenda {
+    display: flex;
+    flex-direction: row;
+    max-width: calc((70vh - 5rem));
+    min-width: 50vw;
+  }
+  main .panel-agenda .sub-panel-agenda img {
+    width: 60%;
+  }
+  main .panel-agenda .sub-panel-agenda iframe {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 575.999px) {
+  main .panel-agenda .sub-panel-agenda {
+    min-width: 50vw;
+  }
+}
+
+/* Empieza estilos de las sections de disco.html */
+#album1,
+#album2 {
+  /* Esto es para que al utilizar los enlaces del nav 
+  no me quede contenido bajo el header fixed */
+  position: relative;
+  bottom: calc(var(--hh) + 1rem);
+}
+
+#album1-aux,
+#album2-aux {
+  /* Esto es para que al utilizar los enlaces del nav 
+  no me quede contenido bajo el header fixed */
+  position: relative;
+  bottom: calc(var(--hhaux) + 1rem);
+}
+
+.sub-panel-discos {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  max-width: 75%;
+  margin: 0 0 1.5rem 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  /* border: black solid 0.5px; */
+  border-radius: 1rem;
+  padding: 0.5rem 0 0.25rem;
+}
+@media only screen and (max-width: 767.999px) {
+  .sub-panel-discos {
+    grid-template-columns: auto;
+  }
+}
+.sub-panel-discos div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub-panel-discos .titulo-album {
+  grid-column: 1/span 2;
+}
+@media only screen and (max-width: 767.999px) {
+  .sub-panel-discos .titulo-album {
+    grid-column: 1/2;
+  }
+}
+.sub-panel-discos .titulo-album p {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.85rem;
+  letter-spacing: 0.1rem;
+  color: white;
+}
+@media only screen and (min-width: 576px) and (max-width: 767.999px) {
+  .sub-panel-discos .titulo-album p {
+    font-size: 1.48rem;
+  }
+}
+@media only screen and (max-width: 575.999px) {
+  .sub-panel-discos .titulo-album p {
+    font-size: 1.11rem;
+    letter-spacing: 0;
+  }
+}
+.sub-panel-discos .img-album img,
+.sub-panel-discos .iframe-album iframe {
+  width: 95%;
+  max-width: calc((100vh - var(--hh)) + 1rem);
+  height: 95%;
+  border-radius: 1rem;
+}
+@media only screen and (max-width: 767.999px) {
+  .sub-panel-discos .img-album img,
+.sub-panel-discos .iframe-album iframe {
+    max-width: 19rem;
+  }
+}
+
+/* Finaliza estilos de todas los elementos de todos los html */
+/* Empieza estilos de las sections de contacto.html */
+.panel-contacto {
+  background-color: rgba(152, 45, 55, 0.8);
+  width: fit-content;
+  text-align: center;
+  border-radius: 2rem;
+  padding: 0 2rem 1rem;
+  position: relative;
+  margin-top: 0.5rem;
+  transition: all 1.5s;
+}
+.panel-contacto h2 {
+  color: white;
+  transition: all 1.5s;
+}
+.panel-contacto .datos-contacto {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 0 0 1rem;
+  width: fit-content;
+  margin: 0 auto;
+  transition: all 1.5s;
+}
+@media only screen and (max-width: 767.999px) {
+  .panel-contacto .datos-contacto {
+    font-size: 1.0005rem;
+  }
+}
+.panel-contacto:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.panel-contacto:hover h2,
+.panel-contacto:hover .datos-contacto {
+  color: #f3be4f;
+}
+
+/* Empieza estilos de las sections de bio.html */
+.div-bio p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  text-align: justify;
+  padding: 0 0 2rem 0;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 2.5rem;
+}
+@media only screen and (max-width: 767.999px) {
+  .div-bio p {
+    font-size: 1.0005rem;
+    line-height: 1.5rem;
+  }
+}
+.div-bio img {
+  /* width: 70%; */
+  width: 100%;
+  display: block;
+  margin: 0 auto 2rem auto;
+  border-radius: 0.5rem;
+}
+
+/* Esto lo hago para sacar la marca de agua de mi hosting */
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

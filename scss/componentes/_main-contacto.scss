@@ -1,0 +1,44 @@
+/* Empieza estilos de las sections de contacto.html */
+
+.panel-contacto {
+    background-color: rgba($c-ppal,80%);
+    width: fit-content;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 0 2rem 1rem;
+ 
+    position: relative;
+    margin-top: 0.5rem;
+
+    transition: all 1.5s;
+
+    h2 {
+        color: invert($c-titulo);
+        transition: all 1.5s;
+    }
+
+    .datos-contacto {
+        font-family: nth($fuente,3);
+        font-size: map-get($font-sizes , texto);
+        color: invert($c-texto);
+        text-align: center;
+        padding: 0 0 1rem;
+        width: fit-content;
+        margin: 0 auto;
+        transition: all 1.5s;
+
+        @include responsive(sm_md) {
+            font-size: map-get($font-sizes , texto) * 0.667;
+        }
+    }
+
+    &:hover {
+        background-color: $c-main;
+
+        h2,
+        .datos-contacto {
+            color: $c-menu-h;
+        }
+    }
+
+}

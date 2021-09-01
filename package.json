@@ -1,0 +1,11 @@
+{
+  "name": "desafio-clase-13_seo_ezequiel-petrone",
+  "version": "1.0.0",
+  "description": "Proyecto Coder House - la Web de una banda de rock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

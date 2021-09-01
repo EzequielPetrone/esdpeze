@@ -1,0 +1,21 @@
+$c-ppal:#982d37;
+// otros bordo #690f0f #6a181a #982d37
+
+$c-body: darken($c-ppal, 15%); // #4c1d1f
+ 
+$c-header: rgba(black, 85%);
+$c-footer: $c-header;
+$c-main: $c-header;
+$c-menu-h: #f3be4f; // #f3d156 #ed9421 #f0ad4e
+$c-menu-f: $c-menu-h;
+$c-menu2-h: lighten($c-ppal, 15%); // #aa3e45
+$c-menu2-f: $c-menu2-h;
+
+$c-titulo: black;
+$c-texto: $c-titulo;
+
+$c-portada: #020204;
+$c-titulo-portada: white;
+
+// --hh: 7.63rem;
+// --hhaux: 7.63rem;

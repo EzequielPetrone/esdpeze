@@ -1,0 +1,76 @@
+/* Empieza estilos footer */
+ 
+footer {
+    // width: 100%;
+    background-color: $c-footer;
+    color: $c-menu-f;
+    @extend %padding-aux;
+    @include dflex(c, 0, 0, center);
+
+    .titulo-footer {
+        font-family: nth($fuente, 2);
+        // font-size: 1.75rem;
+        font-size: map-get($font-sizes , footer);
+        letter-spacing: 0.2rem;
+        @extend %padding-aux;
+
+        @include responsive(sm_md) {
+            font-size: map-get($font-sizes , titulos) * 0.6;
+            letter-spacing: 0.1rem;
+        }
+    }
+
+    .div-redes a i {
+        font-size: map-get($font-sizes , redes-footer);
+        @extend %padding-aux;
+        transition: all 0.5s;
+        transition-timing-function: ease;
+
+        @include responsive(sm_md) {
+            font-size: map-get($font-sizes , redes-footer) * 0.6;
+        }
+
+        &:hover {
+            color: $c-menu2-f;
+            transform: scale(1.25);
+        }
+    }
+
+    .final-footer {
+        @include dflex(r, sb, 0, baseline);
+
+        width: 100%;
+
+        .volver-arriba {
+            @extend %padding-aux;
+            right: 1rem;
+            border-radius: 50%;
+            width: fit-content;
+
+            a {
+                font-size: 0;
+            }
+
+            i {
+                font-size: map-get($font-sizes , footer);
+
+                @include responsive(sm_md) {
+                    font-size: map-get($font-sizes , titulos) * 0.6;
+                }
+
+                &:hover {
+                    color: $c-menu2-f;
+                    transform: scale(1.25);
+                }
+            }
+        }
+
+        .firma-footer {
+            font-family: nth($fuente, 4);
+            font-size: map-get($font-sizes , firma);
+            @extend %padding-aux;
+        }
+    }
+}
+
+/* Finaliza estilos footer */

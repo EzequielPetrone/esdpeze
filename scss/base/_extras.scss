@@ -1,0 +1,16 @@
+
+// link rel="preload" as="font" -> tengo que mejorar performance de las fuentes
+// Defer non-critical CSS
+// Eliminate render-blocking resources
+// Optimize Cumulative Layout Shift
+// Aspect Ratio Boxes
+// reduce unused css (bootstrap)
+
+// BOTON COMPRA TICKET ?
+// UNA FOTO MÁS AL CARROUSEL ?
+// MEJORAR ESPACIOS Y RESPONSIVE
+
+  /* Esto lo hago para sacar la marca de agua de mi hosting */
+  img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+  }

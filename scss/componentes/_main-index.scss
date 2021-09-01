@@ -1,0 +1,144 @@
+/* Empieza estilos de las sections de index.html */
+
+main {
+    .portada {
+        background-color: $c-portada;
+        padding: 0;
+
+        .img-portada {
+            /* max-width: 100%; */
+            min-height: calc(320px / 1.873);
+            max-height: calc(100vh - var(--hh));
+        }
+
+        @include responsive(port) {
+            .img-portrait {
+                display: block;
+            }
+
+            .img-landscape {
+                display: none;
+            }
+        }
+
+        @include responsive(land) {
+            .img-portrait {
+                display: none;
+            }
+
+            .img-landscape {
+                display: block;
+            }
+        }
+
+        .carousel-inner {
+            position: relative;
+
+            h1 {
+                position: absolute;
+                bottom: 1rem;
+                left: 1rem;
+                // text-align: center;
+                font-family: nth($fuente, 2);
+                font-size: map-get($font-sizes, portada);
+                letter-spacing: 0.2rem;
+                color: $c-titulo-portada;
+
+                @include responsive(land) {
+                    left: 14vw;
+                }
+
+                @include responsive(port) {
+                    left: 4vw;
+                }
+
+                @include responsive(lg) {
+                    font-size: map-get($font-sizes, portada) *0.75;
+                    letter-spacing: 0.15rem;
+                    bottom: 0.75rem;
+                }
+
+                @include responsive(sm_md) {
+                    font-size: map-get($font-sizes, portada) *0.5;
+                    letter-spacing: 0.1rem;
+                    bottom: 0.5rem;
+                }
+            }
+        }
+
+    }
+
+    .video-ult-lanzamiento {
+        max-height: calc((100vh - var(--hh)) - 5.5rem);
+        min-height: calc((320px * 0.9) / 1.778);
+
+        @include responsive(sm) {
+            max-height: calc((100vh - var(--hh)) - 4rem);
+        }
+
+        @include responsive(port) {
+            max-width: 90vw;
+            height: calc(90vw / 1.778);
+        }
+
+        @include responsive(land) {
+            max-width: 70vw;
+            height: calc(70vw / 1.778);
+        }
+    }
+
+    #myagenda {
+        /* Esto es para que al utilizar los enlaces del nav 
+      no me quede contenido bajo el header fixed */
+        position: relative;
+        bottom: var(--hh);
+    }
+
+    #myagenda-aux {
+        /* Esto es para que al utilizar los enlaces del nav 
+      no me quede contenido bajo el header fixed */
+        position: relative;
+        bottom: var(--hhaux);
+    }
+
+    .panel-agenda {
+        width: 100%;
+        @include dflex(0, center, w, center);
+
+        .sub-panel-agenda {
+            @include dflex(c, 0, 0, 0);
+            max-width: calc((60vh - 5.5rem)/ 1.25);
+            min-width: 18vw;
+            /* width: 25vw; */
+            background-color: $c-main;
+            padding: 1rem;
+            margin: 0 1rem 1rem;
+            border-radius: 1rem;
+
+            img,
+            iframe {
+                width: 100%;
+            }
+
+            @include responsive(md_lg) {
+
+                @include dflex(r, 0, 0, 0);
+
+                max-width: calc((70vh - 5rem));
+                min-width: 50vw;
+
+                img {
+                    width: 60%;
+                }
+
+                iframe {
+                    width: 40%;
+                }
+            }
+
+            @include responsive(sm) {
+                min-width: 50vw;
+            }
+        }
+    }
+}

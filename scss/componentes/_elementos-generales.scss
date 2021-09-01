@@ -1,0 +1,93 @@
+:root {
+
+    --hh: 7.63rem;
+    --hhaux: var(--hh);
+
+    @include responsive(lg) {
+        --hh: 6.63rem;
+        --hhaux: var(--hh);
+    }
+
+    @include responsive(md) {
+        --hh: 5.68rem;
+        --hhaux: var(--hh);
+    }
+
+    @include responsive(sm) {
+        --hh: 5.63rem;
+        --hhaux: 15.63rem;
+    }
+}
+
+/* Reseteo css por default del HTML */
+
+* {
+    @extend %reset_bm;
+
+    &:before,
+    &:after {
+        @extend %reset_bm;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+
+    // Si tuviese la necesidad de modificar el font size del root...
+    // font-size: 20px;
+
+    body {
+        background-color: $c-body;
+
+        /* Esta me pareció la mejor manera de tener el footer abajo de todo
+        y que queden todos los html dinámicos: */
+        min-height: 100vh;
+        @include dflex(c, sb, 0, 0);
+        z-index: -10;
+
+        /* Reseteo estética de los enlaces */
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        p {
+            /* Esto lo hago para pisar estilos de Bootstrap */
+            margin: 0;
+        }
+
+        /* Seteo algunos estilos generales de las main sections */
+
+        main {
+            background-image: url("../images/fondos/patron1_light_2.png");
+            background-repeat: repeat;
+            @include dflex(c, center, 0, 0);
+            flex: 1;
+            padding: 0 0 0.5rem;
+
+            section {
+                @include dflex(c, 0, 0, center);
+ 
+                h2 {
+                    font-family: nth($fuente, 1);
+                    font-size: map-get($font-sizes , titulos);
+                    color: $c-titulo;
+                    letter-spacing: 0.2rem;
+                    padding: 1.5rem 0 0.75rem;
+
+                    /* Culpa de Bootstrap */
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    font-weight: bold;
+                    line-height: inherit;
+
+                    @include responsive(sm_md) { 
+                        font-size: map-get($font-sizes , titulos) * 0.6;
+                        letter-spacing: 0.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
