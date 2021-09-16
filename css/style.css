@@ -88,7 +88,13 @@ html body main section h2 {
   font-weight: bold;
   line-height: inherit;
 }
-@media only screen and (max-width: 767.999px) {
+@media only screen and (min-width: 576px) and (max-width: 767.999px) {
+  html body main section h2 {
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+  }
+}
+@media only screen and (max-width: 575.999px) {
   html body main section h2 {
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
@@ -444,14 +450,14 @@ main .panel-agenda .sub-panel-agenda iframe {
 
 .sub-panel-discos {
   display: grid;
-  grid-template-columns: 50% 50%;
   grid-template-rows: auto;
   max-width: 75%;
-  margin: 0 0 1.5rem 0;
+  padding: 1rem;
+  row-gap: 0.5rem;
+  column-gap: 1rem;
   background-color: rgba(0, 0, 0, 0.85);
-  /* border: black solid 0.5px; */
   border-radius: 1rem;
-  padding: 0.5rem 0 0.25rem;
+  margin: 0 0 1.5rem 0;
 }
 @media only screen and (max-width: 767.999px) {
   .sub-panel-discos {
@@ -461,7 +467,6 @@ main .panel-agenda .sub-panel-agenda iframe {
 .sub-panel-discos div {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .sub-panel-discos .titulo-album {
   grid-column: 1/span 2;
@@ -490,15 +495,14 @@ main .panel-agenda .sub-panel-agenda iframe {
 }
 .sub-panel-discos .img-album img,
 .sub-panel-discos .iframe-album iframe {
-  width: 95%;
-  max-width: calc((100vh - var(--hh)) + 1rem);
-  height: 95%;
+  width: 100%;
+  max-width: calc(70vh - var(--hh));
   border-radius: 1rem;
 }
 @media only screen and (max-width: 767.999px) {
   .sub-panel-discos .img-album img,
 .sub-panel-discos .iframe-album iframe {
-    max-width: 19rem;
+    max-width: 100%;
   }
 }
 

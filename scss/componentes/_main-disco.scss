@@ -19,21 +19,24 @@
 .sub-panel-discos {
 
     display: grid;
-    grid-template-columns: 50% 50%;
+    // grid-template-columns: 50% 50%;
     grid-template-rows: auto;
     max-width: 75%;
-    margin: 0 0 1.5rem 0;
+    padding: 1rem;
+    row-gap: 0.5rem;
+    column-gap: 1rem;
     background-color: $c-main;
-    /* border: black solid 0.5px; */
+    // border: black solid 0.5px;
     border-radius: 1rem;
-    padding: 0.5rem 0 0.25rem;
+    margin: 0 0 1.5rem 0;
+
 
     @include responsive(sm_md) {
         grid-template-columns: auto;
     }
 
     div {
-        @include dflex(0, center, 0, center);
+        @include dflex(0, center, 0, 0);
     }
  
     .titulo-album {
@@ -62,13 +65,13 @@
 
     .img-album img,
     .iframe-album iframe {
-        width: 95%;
-        max-width: calc((100vh - var(--hh)) + 1rem);
-        height: 95%;
+        width: 100%;
+        max-width: calc(70vh - var(--hh));
+        // height: 95%;
         border-radius: 1rem;
 
         @include responsive(sm_md) {
-            max-width: 19rem;
+            max-width: 100%;
         }
     }
 

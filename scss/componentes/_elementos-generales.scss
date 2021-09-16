@@ -82,7 +82,11 @@ html {
                     font-weight: bold;
                     line-height: inherit;
 
-                    @include responsive(sm_md) { 
+                    @include responsive(md) { 
+                        font-size: map-get($font-sizes , titulos) * 0.8;
+                        letter-spacing: 0.15rem;
+                    }
+                    @include responsive(sm) { 
                         font-size: map-get($font-sizes , titulos) * 0.6;
                         letter-spacing: 0.1rem;
                     }
