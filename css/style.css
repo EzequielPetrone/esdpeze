@@ -508,41 +508,139 @@ main .panel-agenda .sub-panel-agenda iframe {
 
 /* Finaliza estilos de todas los elementos de todos los html */
 /* Empieza estilos de las sections de contacto.html */
-.panel-contacto {
-  background-color: rgba(152, 45, 55, 0.8);
-  width: fit-content;
+.section-contacto {
+  padding: 1.5rem 1rem;
+}
+.section-contacto .panel-contacto {
+  background-color: rgba(152, 45, 55, 0.75);
   text-align: center;
-  border-radius: 2rem;
-  padding: 0 2rem 1rem;
-  position: relative;
-  margin-top: 0.5rem;
+  border-radius: 1rem;
+  padding: 0.25rem 2rem 2rem;
   transition: all 1.5s;
+  width: 60%;
 }
-.panel-contacto h2 {
-  color: white;
-  transition: all 1.5s;
-}
-.panel-contacto .datos-contacto {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
-  color: white;
-  text-align: center;
-  padding: 0 0 1rem;
-  width: fit-content;
-  margin: 0 auto;
-  transition: all 1.5s;
-}
-@media only screen and (max-width: 767.999px) {
-  .panel-contacto .datos-contacto {
-    font-size: 1.0005rem;
+@media only screen and (min-width: 576px) and (max-width: 767.999px) {
+  .section-contacto .panel-contacto {
+    width: 80%;
   }
 }
-.panel-contacto:hover {
-  background-color: rgba(0, 0, 0, 0.85);
+@media only screen and (max-width: 575.999px) {
+  .section-contacto .panel-contacto {
+    width: 100%;
+    padding: 0rem 1.5rem 1.5rem;
+  }
 }
-.panel-contacto:hover h2,
-.panel-contacto:hover .datos-contacto {
-  color: #f3be4f;
+.section-contacto .panel-contacto * {
+  transition: all 1.5s;
+}
+.section-contacto .panel-contacto h2 {
+  color: white;
+  transition: all 1.5s;
+}
+.section-contacto .panel-contacto .form-style-7 {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem 1rem;
+  color: #982d37;
+}
+.section-contacto .panel-contacto .form-style-7 .campos-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1rem;
+}
+@media only screen and (max-width: 767.999px) {
+  .section-contacto .panel-contacto .form-style-7 .campos-form {
+    grid-template-columns: auto;
+  }
+}
+.section-contacto .panel-contacto .form-style-7 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.section-contacto .panel-contacto .form-style-7 ul li {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid #982d37;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+@media only screen and (max-width: 575.999px) {
+  .section-contacto .panel-contacto .form-style-7 ul li {
+    margin-bottom: 1.5rem;
+  }
+}
+.section-contacto .panel-contacto .form-style-7 ul li label {
+  display: block;
+  float: left;
+  margin-top: -1.5rem;
+  background: white;
+  padding: 2px 5px;
+  font-size: 1rem;
+}
+@media only screen and (max-width: 575.999px) {
+  .section-contacto .panel-contacto .form-style-7 ul li label {
+    font-size: 0.7rem;
+    margin-top: -1.2rem;
+  }
+}
+.section-contacto .panel-contacto .form-style-7 ul li input[type=text],
+.section-contacto .panel-contacto .form-style-7 ul li input[type=email],
+.section-contacto .panel-contacto .form-style-7 ul li textarea,
+.section-contacto .panel-contacto .form-style-7 ul li select {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  display: block;
+  outline: none;
+  border: none;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  padding: 0;
+  color: #0e0405;
+}
+@media only screen and (max-width: 575.999px) {
+  .section-contacto .panel-contacto .form-style-7 ul li input[type=text],
+.section-contacto .panel-contacto .form-style-7 ul li input[type=email],
+.section-contacto .panel-contacto .form-style-7 ul li textarea,
+.section-contacto .panel-contacto .form-style-7 ul li select {
+    font-size: 0.7rem;
+  }
+}
+.section-contacto .panel-contacto .form-style-7 ul li textarea {
+  height: 6.43rem;
+}
+@media only screen and (max-width: 767.999px) {
+  .section-contacto .panel-contacto .form-style-7 ul li textarea {
+    height: 1.5rem;
+  }
+}
+.section-contacto .panel-contacto .form-style-7 ul #ult-btn {
+  border: none;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 0;
+}
+.section-contacto .panel-contacto .form-style-7 ul #ult-btn input[type=submit],
+.section-contacto .panel-contacto .form-style-7 ul #ult-btn input[type=button] {
+  background: rgba(152, 45, 55, 0.25);
+  color: #982d37;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #982d37;
+  border-bottom: 0.25rem solid #982d37;
+  border-radius: 0.5rem;
+}
+@media only screen and (max-width: 767.999px) {
+  .section-contacto .panel-contacto .form-style-7 ul #ult-btn input[type=submit],
+.section-contacto .panel-contacto .form-style-7 ul #ult-btn input[type=button] {
+    padding: 0.5rem 1rem;
+  }
+}
+.section-contacto .panel-contacto .form-style-7 ul #ult-btn input[type=submit]:hover,
+.section-contacto .panel-contacto .form-style-7 ul #ult-btn input[type=button]:hover {
+  background: rgba(152, 45, 55, 0.75);
+  color: white;
 }
 
 /* Empieza estilos de las sections de bio.html */
