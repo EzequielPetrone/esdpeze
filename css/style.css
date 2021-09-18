@@ -16,25 +16,19 @@ footer .final-footer .firma-footer, footer .final-footer .volver-arriba, footer 
 
 /* Importo fuentes API Google */
 :root {
-  --hh: 7.63rem;
+  --hh: 7.5rem;
   --hhaux: var(--hh);
-}
-@media only screen and (min-width: 768px) and (max-width: 991.999px) {
-  :root {
-    --hh: 6.63rem;
-    --hhaux: var(--hh);
-  }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.999px) {
   :root {
-    --hh: 5.68rem;
+    --hh: 6.55rem;
     --hhaux: var(--hh);
   }
 }
 @media only screen and (max-width: 575.999px) {
   :root {
-    --hh: 5.63rem;
-    --hhaux: 15.63rem;
+    --hh: 6.5rem;
+    --hhaux: 16.5rem;
   }
 }
 
@@ -43,7 +37,8 @@ html {
   scroll-behavior: smooth;
 }
 html body {
-  background-color: #5d1c22;
+  background-image: url("../images/fondos/patron1_light_2.png");
+  background-repeat: repeat;
   /* Esta me pareció la mejor manera de tener el footer abajo de todo
   y que queden todos los html dinámicos: */
   min-height: 100vh;
@@ -63,8 +58,6 @@ html body p {
   margin: 0;
 }
 html body main {
-  background-image: url("../images/fondos/patron1_light_2.png");
-  background-repeat: repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,13 +68,14 @@ html body main section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem 0;
 }
 html body main section h2 {
   font-family: "Bebas Neue", cursive;
   font-size: 2.5rem;
   color: black;
   letter-spacing: 0.2rem;
-  padding: 1.5rem 0 0.75rem;
+  padding: 1rem 0 0.75rem;
   /* Culpa de Bootstrap */
   margin-top: 0;
   margin-bottom: 0;
@@ -103,14 +97,14 @@ html body main section h2 {
 
 /* Empieza estilos header */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(14, 4, 5, 0.95);
   padding: 0.5rem 1rem;
 }
 .navbar .navbar-brand-custom {
   margin-right: 0;
 }
 .navbar .navbar-brand-custom .img-logo {
-  width: 6rem;
+  width: 5rem;
   border-radius: 100%;
   transition: transform 1s;
   transition-timing-function: linear;
@@ -118,11 +112,6 @@ html body main section h2 {
 }
 .navbar .navbar-brand-custom .img-logo:hover {
   transform: rotate(360deg);
-}
-@media only screen and (min-width: 768px) and (max-width: 991.999px) {
-  .navbar .navbar-brand-custom .img-logo {
-    width: 5rem;
-  }
 }
 @media only screen and (max-width: 767.999px) {
   .navbar .navbar-brand-custom .img-logo {
@@ -157,9 +146,9 @@ html body main section h2 {
   margin-bottom: 0;
 }
 .navbar .navbar-collapse-custom .lista-nav li {
-  font-size: 2rem;
-  letter-spacing: 0.2rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+  padding: 0.375rem 0.75rem;
   transition: 0.5s;
   transition-timing-function: ease;
   width: min-content;
@@ -169,13 +158,6 @@ html body main section h2 {
 }
 .navbar .navbar-collapse-custom .lista-nav li:hover ul {
   display: block;
-}
-@media only screen and (min-width: 768px) and (max-width: 991.999px) {
-  .navbar .navbar-collapse-custom .lista-nav li {
-    font-size: 1.5rem;
-    letter-spacing: 0.15rem;
-    padding: 0.375rem 0.75rem;
-  }
 }
 @media only screen and (max-width: 767.999px) {
   .navbar .navbar-collapse-custom .lista-nav li {
@@ -202,15 +184,9 @@ html body main section h2 {
 }
 .navbar .navbar-collapse-custom .lista-nav li ul li {
   padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.85);
-  font-size: 1.2rem;
-  min-width: 18.5rem;
-}
-@media only screen and (min-width: 768px) and (max-width: 991.999px) {
-  .navbar .navbar-collapse-custom .lista-nav li ul li {
-    font-size: 0.8004rem;
-    min-width: 13rem;
-  }
+  background-color: rgba(14, 4, 5, 0.85);
+  font-size: 0.8004rem;
+  min-width: 13rem;
 }
 @media only screen and (max-width: 767.999px) {
   .navbar .navbar-collapse-custom .lista-nav li ul li {
@@ -230,7 +206,7 @@ html body main section h2 {
 /* Finaliza estilos header */
 /* Empieza estilos footer */
 footer {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(14, 4, 5, 0.95);
   color: #f3be4f;
   display: flex;
   flex-direction: column;
@@ -238,7 +214,7 @@ footer {
 }
 footer .titulo-footer {
   font-family: "Bangers", cursive;
-  font-size: 2rem;
+  font-size: 1.6rem;
   letter-spacing: 0.2rem;
 }
 @media only screen and (max-width: 767.999px) {
@@ -248,7 +224,7 @@ footer .titulo-footer {
   }
 }
 footer .div-redes a i {
-  font-size: 2.5rem;
+  font-size: 2rem;
   transition: all 0.5s;
   transition-timing-function: ease;
 }
@@ -277,11 +253,11 @@ footer .final-footer .volver-arriba a {
   font-size: 0;
 }
 footer .final-footer .volver-arriba i {
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 @media only screen and (max-width: 767.999px) {
   footer .final-footer .volver-arriba i {
-    font-size: 1.5rem;
+    font-size: 1.625rem;
   }
 }
 footer .final-footer .volver-arriba i:hover {
@@ -296,13 +272,13 @@ footer .final-footer .firma-footer {
 /* Finaliza estilos footer */
 /* Empieza estilos de las sections de index.html */
 main .portada {
-  background-color: #020204;
+  background-color: #040104;
   padding: 0;
 }
 main .portada .img-portada {
   /* max-width: 100%; */
   min-height: calc(320px / 1.873);
-  max-height: calc(100vh - var(--hh));
+  max-height: calc((100vh + 1rem) - var(--hh));
 }
 @media only screen and (orientation: portrait) {
   main .portada .img-portrait {
@@ -356,27 +332,6 @@ main .portada .carousel-inner h1 {
     bottom: 0.5rem;
   }
 }
-main .video-ult-lanzamiento {
-  max-height: calc((100vh - var(--hh)) - 5.5rem);
-  min-height: calc((320px * 0.9) / 1.778);
-}
-@media only screen and (max-width: 575.999px) {
-  main .video-ult-lanzamiento {
-    max-height: calc((100vh - var(--hh)) - 4rem);
-  }
-}
-@media only screen and (orientation: portrait) {
-  main .video-ult-lanzamiento {
-    max-width: 90vw;
-    height: calc(90vw / 1.778);
-  }
-}
-@media only screen and (orientation: landscape) {
-  main .video-ult-lanzamiento {
-    max-width: 70vw;
-    height: calc(70vw / 1.778);
-  }
-}
 main #myagenda {
   /* Esto es para que al utilizar los enlaces del nav 
   no me quede contenido bajo el header fixed */
@@ -392,20 +347,23 @@ main #myagenda-aux {
 main .panel-agenda {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
 }
 main .panel-agenda .sub-panel-agenda {
   display: flex;
   flex-direction: column;
-  max-width: calc((60vh - 5.5rem)/ 1.25);
-  min-width: 18vw;
+  max-width: calc((60vh - 7.5rem)/ 1.25);
+  min-width: 15vw;
   /* width: 25vw; */
   background-color: rgba(0, 0, 0, 0.85);
   padding: 1rem;
-  margin: 0 1rem 1rem;
+  margin: 1rem;
   border-radius: 1rem;
+}
+main .panel-agenda .sub-panel-agenda:hover {
+  transform: scale(1.05);
 }
 main .panel-agenda .sub-panel-agenda img,
 main .panel-agenda .sub-panel-agenda iframe {
@@ -448,60 +406,72 @@ main .panel-agenda .sub-panel-agenda iframe {
   bottom: calc(var(--hhaux) + 1rem);
 }
 
-.sub-panel-discos {
+.sub-panel-discos-externo {
+  max-width: 50%;
+  transition: all 0.5s;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 575.999px) {
+  .sub-panel-discos-externo {
+    margin-top: 0.5rem;
+  }
+}
+.sub-panel-discos-externo:hover {
+  transform: scale(1.05);
+}
+.sub-panel-discos-externo .sub-panel-discos {
   display: grid;
   grid-template-rows: auto;
-  max-width: 75%;
   padding: 1rem;
   row-gap: 0.5rem;
   column-gap: 1rem;
   background-color: rgba(0, 0, 0, 0.85);
   border-radius: 1rem;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2rem;
 }
 @media only screen and (max-width: 767.999px) {
-  .sub-panel-discos {
+  .sub-panel-discos-externo .sub-panel-discos {
     grid-template-columns: auto;
   }
 }
-.sub-panel-discos div {
+.sub-panel-discos-externo .sub-panel-discos div {
   display: flex;
   justify-content: center;
 }
-.sub-panel-discos .titulo-album {
+.sub-panel-discos-externo .sub-panel-discos .titulo-album {
   grid-column: 1/span 2;
 }
 @media only screen and (max-width: 767.999px) {
-  .sub-panel-discos .titulo-album {
+  .sub-panel-discos-externo .sub-panel-discos .titulo-album {
     grid-column: 1/2;
   }
 }
-.sub-panel-discos .titulo-album p {
+.sub-panel-discos-externo .sub-panel-discos .titulo-album p {
   font-family: "Bebas Neue", cursive;
   font-size: 1.85rem;
   letter-spacing: 0.1rem;
   color: white;
 }
 @media only screen and (min-width: 576px) and (max-width: 767.999px) {
-  .sub-panel-discos .titulo-album p {
+  .sub-panel-discos-externo .sub-panel-discos .titulo-album p {
     font-size: 1.48rem;
   }
 }
 @media only screen and (max-width: 575.999px) {
-  .sub-panel-discos .titulo-album p {
+  .sub-panel-discos-externo .sub-panel-discos .titulo-album p {
     font-size: 1.11rem;
     letter-spacing: 0;
   }
 }
-.sub-panel-discos .img-album img,
-.sub-panel-discos .iframe-album iframe {
+.sub-panel-discos-externo .sub-panel-discos .img-album img,
+.sub-panel-discos-externo .sub-panel-discos .iframe-album iframe {
   width: 100%;
   max-width: calc(70vh - var(--hh));
   border-radius: 1rem;
 }
 @media only screen and (max-width: 767.999px) {
-  .sub-panel-discos .img-album img,
-.sub-panel-discos .iframe-album iframe {
+  .sub-panel-discos-externo .sub-panel-discos .img-album img,
+.sub-panel-discos-externo .sub-panel-discos .iframe-album iframe {
     max-width: 100%;
   }
 }
@@ -509,7 +479,7 @@ main .panel-agenda .sub-panel-agenda iframe {
 /* Finaliza estilos de todas los elementos de todos los html */
 /* Empieza estilos de las sections de contacto.html */
 .section-contacto {
-  padding: 1.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 .section-contacto .panel-contacto {
   background-color: rgba(152, 45, 55, 0.75);

@@ -1,21 +1,21 @@
 :root {
 
-    --hh: 7.63rem;
+    --hh: 7.5rem;
     --hhaux: var(--hh);
 
-    @include responsive(lg) {
-        --hh: 6.63rem;
-        --hhaux: var(--hh);
-    }
+    // @include responsive(lg) {
+    //     --hh: 7.5rem;
+    //     --hhaux: var(--hh);
+    // }
 
     @include responsive(md) {
-        --hh: 5.68rem;
+        --hh: 6.55rem;
         --hhaux: var(--hh);
     }
 
     @include responsive(sm) {
-        --hh: 5.63rem;
-        --hhaux: 15.63rem;
+        --hh: 6.5rem;
+        --hhaux: 16.5rem;
     }
 }
 
@@ -37,7 +37,9 @@ html {
     // font-size: 20px;
 
     body {
-        background-color: $c-body;
+        // background-color: $c-body;
+        background-image: url("../images/fondos/patron1_light_2.png");
+        background-repeat: repeat;
 
         /* Esta me pareció la mejor manera de tener el footer abajo de todo
         y que queden todos los html dinámicos: */
@@ -60,21 +62,22 @@ html {
         /* Seteo algunos estilos generales de las main sections */
 
         main {
-            background-image: url("../images/fondos/patron1_light_2.png");
-            background-repeat: repeat;
+            // background-image: url("../images/fondos/patron1_light_2.png");
+            // background-repeat: repeat;
             @include dflex(c, center, 0, 0);
             flex: 1;
             padding: 0 0 0.5rem;
 
             section {
                 @include dflex(c, 0, 0, center);
+                padding: 1rem 0;
  
                 h2 {
                     font-family: nth($fuente, 1);
                     font-size: map-get($font-sizes , titulos);
                     color: $c-titulo;
                     letter-spacing: 0.2rem;
-                    padding: 1.5rem 0 0.75rem;
+                    padding: 1rem 0 0.75rem;
 
                     /* Culpa de Bootstrap */
                     margin-top: 0;

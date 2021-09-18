@@ -8,7 +8,7 @@ main {
         .img-portada {
             /* max-width: 100%; */
             min-height: calc(320px / 1.873);
-            max-height: calc(100vh - var(--hh));
+            max-height: calc((100vh + 1rem) - var(--hh));
         }
 
         @include responsive(port) {
@@ -68,24 +68,24 @@ main {
 
     }
 
-    .video-ult-lanzamiento {
-        max-height: calc((100vh - var(--hh)) - 5.5rem);
-        min-height: calc((320px * 0.9) / 1.778);
+    // .video-ult-lanzamiento {
+    //     max-height: calc((100vh - var(--hh)) - 5.5rem);
+    //     min-height: calc((320px * 0.9) / 1.778);
 
-        @include responsive(sm) {
-            max-height: calc((100vh - var(--hh)) - 4rem);
-        }
+    //     @include responsive(sm) {
+    //         max-height: calc((100vh - var(--hh)) - 4rem);
+    //     }
 
-        @include responsive(port) {
-            max-width: 90vw;
-            height: calc(90vw / 1.778);
-        }
+    //     @include responsive(port) {
+    //         max-width: 90vw;
+    //         height: calc(90vw / 1.778);
+    //     }
 
-        @include responsive(land) {
-            max-width: 70vw;
-            height: calc(70vw / 1.778);
-        }
-    }
+    //     @include responsive(land) {
+    //         max-width: 70vw;
+    //         height: calc(70vw / 1.778);
+    //     }
+    // }
 
     #myagenda {
         /* Esto es para que al utilizar los enlaces del nav 
@@ -103,17 +103,22 @@ main {
 
     .panel-agenda {
         width: 100%;
-        @include dflex(0, center, w, center);
+        @include dflex(0, space-evenly, w, center);
 
         .sub-panel-agenda {
             @include dflex(c, 0, 0, 0);
-            max-width: calc((60vh - 5.5rem)/ 1.25);
-            min-width: 18vw;
+            max-width: calc((60vh - 7.5rem)/ 1.25);
+            min-width: 15vw;
             /* width: 25vw; */
             background-color: $c-main;
             padding: 1rem;
-            margin: 0 1rem 1rem;
+            margin: 1rem;
             border-radius: 1rem;
+            // transition: all 3s;
+
+            &:hover {
+                transform: scale(1.05)
+            }
 
             img,
             iframe {

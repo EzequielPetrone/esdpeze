@@ -16,65 +16,76 @@
     bottom: calc(var(--hhaux) + 1rem);
 }
 
-.sub-panel-discos {
-
-    display: grid;
-    // grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    max-width: 75%;
-    padding: 1rem;
-    row-gap: 0.5rem;
-    column-gap: 1rem;
-    background-color: $c-main;
-    // border: black solid 0.5px;
-    border-radius: 1rem;
-    margin: 0 0 1.5rem 0;
-
-
-    @include responsive(sm_md) {
-        grid-template-columns: auto;
+.sub-panel-discos-externo {
+    max-width: 50%;
+    transition: all .5s;
+    margin-top: 1rem;
+    @include responsive(sm) {
+        margin-top: 0.5rem;
     }
 
-    div {
-        @include dflex(0, center, 0, 0);
-    }
- 
-    .titulo-album {
-        grid-column: 1 / span 2;
-
-        @include responsive(sm_md) {
-            grid-column: 1 / 2;
-        }
-
-        p {
-            font-family: nth($fuente, 1);
-            font-size: map-get($font-sizes , panel);
-            letter-spacing: 0.1rem;
-            color: invert($c-texto);
-
-            @include responsive(md) {
-                font-size: map-get($font-sizes , panel) * 0.8;
-            }
-
-            @include responsive(sm) {
-                font-size: map-get($font-sizes , panel) * 0.6;
-                letter-spacing: 0;
-            }
-        }
+    &:hover {
+        transform: scale(1.05)
     }
 
-    .img-album img,
-    .iframe-album iframe {
-        width: 100%;
-        max-width: calc(70vh - var(--hh));
-        // height: 95%;
+    .sub-panel-discos {
+
+        display: grid;
+        // grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        
+        padding: 1rem;
+        row-gap: 0.5rem;
+        column-gap: 1rem;
+        background-color: $c-main;
+        // border: black solid 0.5px;
         border-radius: 1rem;
+        margin: 0 0 2rem;
 
         @include responsive(sm_md) {
-            max-width: 100%;
+            grid-template-columns: auto;
+        }
+
+        div {
+            @include dflex(0, center, 0, 0);
+        }
+
+        .titulo-album {
+            grid-column: 1 / span 2;
+
+            @include responsive(sm_md) {
+                grid-column: 1 / 2;
+            }
+
+            p {
+                font-family: nth($fuente, 1);
+                font-size: map-get($font-sizes, panel);
+                letter-spacing: 0.1rem;
+                color: invert($c-texto);
+
+                @include responsive(md) {
+                    font-size: map-get($font-sizes, panel) * 0.8;
+                }
+
+                @include responsive(sm) {
+                    font-size: map-get($font-sizes, panel) * 0.6;
+                    letter-spacing: 0;
+                }
+            }
+        }
+
+        .img-album img,
+        .iframe-album iframe {
+            width: 100%;
+            max-width: calc(70vh - var(--hh));
+            // height: 95%;
+            border-radius: 1rem;
+
+            @include responsive(sm_md) {
+                max-width: 100%;
+            }
         }
     }
-
 
 }
 
