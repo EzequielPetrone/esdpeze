@@ -21,10 +21,6 @@
     transition: all .5s;
     margin: 0.5rem 0;
 
-    // @include responsive(md) {
-    //     max-width: 70%;
-    // }
-
     @include responsive(sm) {
         margin-top: 0.5rem;
         max-width: 80%;
@@ -44,7 +40,6 @@
         row-gap: 0.5rem;
         column-gap: 1rem;
         background-color: $c-main;
-        // border: black solid 0.5px;
         border-radius: 1rem;
         margin: 0 0 2rem;
 
@@ -60,9 +55,7 @@
             grid-column: 1 / span 2;
 
             @include responsive(sm_md) {
-                @include responsive(port) {
-                    grid-column: 1 / 2;
-                }
+                grid-column: 1 / 2;
             }
 
             p {
@@ -93,7 +86,6 @@
         .iframe-album iframe {
             width: 100%;
             max-width: calc(70vh - var(--hh));
-            // height: 95%;
             border-radius: 1rem;
 
             @include responsive(sm_md) {
@@ -103,5 +95,3 @@
     }
 
 }
-
-/* Finaliza estilos de todas los elementos de todos los html */

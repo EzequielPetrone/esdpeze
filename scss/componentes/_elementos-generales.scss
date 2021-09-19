@@ -1,12 +1,7 @@
 :root {
-
+    /*Lo uso para tener en cuenta la altura del header a definir el tamaño de ciertos elementos*/
     --hh: 7.5rem;
     --hhaux: var(--hh);
-
-    // @include responsive(lg) {
-    //     --hh: 7.5rem;
-    //     --hhaux: var(--hh);
-    // }
 
     @include responsive(md) {
         --hh: 6.55rem;
@@ -32,9 +27,6 @@
 
 html {
     scroll-behavior: smooth;
-
-    // Si tuviese la necesidad de modificar el font size del root...
-    // font-size: 20px;
 
     body {
         // background-color: $c-body;
@@ -62,8 +54,7 @@ html {
         /* Seteo algunos estilos generales de las main sections */
 
         main {
-            // background-image: url("../images/fondos/patron1_light_2.png");
-            // background-repeat: repeat;
+
             @include dflex(c, center, 0, 0);
             flex: 1;
             padding: 0 0 0.5rem;
@@ -71,26 +62,27 @@ html {
             section {
                 @include dflex(c, 0, 0, center);
                 padding: 1rem 0;
- 
+
                 h2 {
                     font-family: nth($fuente, 1);
-                    font-size: map-get($font-sizes , titulos);
+                    font-size: map-get($font-sizes, titulos);
                     color: $c-titulo;
                     letter-spacing: 0.2rem;
                     padding: 1rem 0 0.75rem;
 
-                    /* Culpa de Bootstrap */
+                    /* Pisando Bootstrap */
                     margin-top: 0;
                     margin-bottom: 0;
                     font-weight: bold;
                     line-height: inherit;
 
-                    @include responsive(md) { 
-                        font-size: map-get($font-sizes , titulos) * 0.8;
+                    @include responsive(md) {
+                        font-size: map-get($font-sizes, titulos) * 0.8;
                         letter-spacing: 0.15rem;
                     }
-                    @include responsive(sm) { 
-                        font-size: map-get($font-sizes , titulos) * 0.6;
+
+                    @include responsive(sm) {
+                        font-size: map-get($font-sizes, titulos) * 0.6;
                         letter-spacing: 0.1rem;
                     }
                 }

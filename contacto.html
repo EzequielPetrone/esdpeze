@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO -->
     <meta name="description"
         content="Página oficial de El Síndrome de Peter! Tu banda de Rock! Contactate con nosotros">
     <meta name="keywords" content="Síndrome, Peter, ESDP, Música, Rock, Argentina, Contacto">
@@ -20,7 +21,6 @@
     <meta property="og:description"
         content="Página oficial de El Síndrome de Peter! Tu banda de Rock! Contactate con nosotros" />
     <meta property="og:image" content="https://esdpeze.000webhostapp.com/images/logos/IMG-20200818-WA0025.jpg" />
-    <!-- <meta property="og:url" content="" /> -->
     <meta property="og:site_name" content="El Síndrome de Peter" />
 
     <!-- Linkeo Bootstrap -->
@@ -37,12 +37,14 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- Linkeo Favicon -->
     <link rel="shortcut icon" href="images/logos/favicon.ico" type="image/x-icon">
 
     <title>El Síndrome de Peter Rock! - Contacto</title>
 </head>
 
 <body id="mybody">
+
     <header class="sticky-top">
         <nav class="navbar navbar-expand-sm w-100">
             <div class="container-fluid">
@@ -51,7 +53,6 @@
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic"
                     aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- <span class="navbar-toggler-icon"></span> -->
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse navbar-collapse-custom" id="navbarBasic">
@@ -80,11 +81,11 @@
             </div>
         </nav>
     </header>
+
     <main class="section-contacto">
         <section>
             <div class="panel-contacto">
                 <h2>Contacto</h2>
-                <!-- Ahora pongo unos correos de contacto, pero a futuro la idea es hacer un formulario en esta section-->
                 <form class="form-style-7">
                     <div class="campos-form">
                         <div>
@@ -102,28 +103,26 @@
                                 <li>
                                     <label for="phone">Teléfono</label>
                                     <input type="text" name="phone" maxlength="100">
-                                    <!-- <span>Enter your full name here</span> -->
                                 </li>
                             </ul>
                         </div>
                         <div>
-    
+
                             <ul>
                                 <li>
                                     <label for="subject">Asunto</label>
                                     <input type="text" name="subject" maxlength="100">
-                                    <!-- <span>Your website address (eg: http://www.google.com)</span> -->
                                 </li>
                                 <li>
                                     <label for="bio">Mensaje</label>
                                     <textarea name="bio" onkeyup="adjust_textarea(this)"></textarea>
                                     <!-- <span>Say something about yourself</span> -->
                                 </li>
-                                
+
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div>
                         <ul>
                             <li id="ult-btn">
@@ -135,6 +134,7 @@
             </div>
         </section>
     </main>
+
     <footer data-aos="fade-up">
         <p class="titulo-footer">Seguinos en las redes!</p>
         <div class="div-redes">
@@ -176,6 +176,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
 
+    <!-- Script que sirve para un auto expand del mensaje del formulario a medida que suma caracteres -->
     <script type="text/javascript">
         //auto expand textarea
         function adjust_textarea(h) {

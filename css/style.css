@@ -16,6 +16,7 @@ footer .final-footer .firma-footer, footer .final-footer .volver-arriba, footer 
 
 /* Importo fuentes API Google */
 :root {
+  /*Lo uso para tener en cuenta la altura del header a definir el tamaño de ciertos elementos*/
   --hh: 7.5rem;
   --hhaux: var(--hh);
 }
@@ -76,7 +77,7 @@ html body main section h2 {
   color: black;
   letter-spacing: 0.2rem;
   padding: 1rem 0 0.75rem;
-  /* Culpa de Bootstrap */
+  /* Pisando Bootstrap */
   margin-top: 0;
   margin-bottom: 0;
   font-weight: bold;
@@ -276,7 +277,6 @@ main .portada {
   padding: 0;
 }
 main .portada .img-portada {
-  /* max-width: 100%; */
   min-height: calc(320px / 1.873);
   max-height: calc((100vh + 1rem) - var(--hh));
 }
@@ -296,10 +296,10 @@ main .portada .img-portada {
     display: block;
   }
 }
-main .portada .carousel-inner {
+main .portada .carousel-inner-custom {
   position: relative;
 }
-main .portada .carousel-inner h1 {
+main .portada .carousel-inner-custom h1 {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
@@ -309,24 +309,24 @@ main .portada .carousel-inner h1 {
   color: white;
 }
 @media only screen and (orientation: landscape) {
-  main .portada .carousel-inner h1 {
+  main .portada .carousel-inner-custom h1 {
     left: 14vw;
   }
 }
 @media only screen and (orientation: portrait) {
-  main .portada .carousel-inner h1 {
+  main .portada .carousel-inner-custom h1 {
     left: 4vw;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.999px) {
-  main .portada .carousel-inner h1 {
+  main .portada .carousel-inner-custom h1 {
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
     bottom: 0.75rem;
   }
 }
 @media only screen and (max-width: 767.999px) {
-  main .portada .carousel-inner h1 {
+  main .portada .carousel-inner-custom h1 {
     font-size: 1rem;
     letter-spacing: 0.1rem;
     bottom: 0.5rem;
@@ -350,7 +350,6 @@ main .panel-agenda {
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
   /* This container is needed to position the front and back side */
   /* Do an horizontal flip when you move the mouse over the flip box container */
   /* Style the back side */
@@ -364,6 +363,7 @@ main .panel-agenda .flip-card {
 main .panel-agenda .flip-card-inner {
   background-color: rgba(0, 0, 0, 0.85);
   padding: 1rem;
+  margin: 1rem;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -379,18 +379,19 @@ main .panel-agenda .flip-card-front {
 }
 main .panel-agenda .flip-card-front img {
   width: calc((75vh - 7.5rem)/ 1.25);
-  min-width: 15vw;
-  max-width: 25vw;
+  max-width: 23vw;
   border-radius: 0.5rem;
 }
 @media only screen and (min-width: 576px) and (max-width: 767.999px) {
   main .panel-agenda .flip-card-front img {
     max-width: 55vw;
+    min-width: 17rem;
   }
 }
 @media only screen and (max-width: 575.999px) {
   main .panel-agenda .flip-card-front img {
     max-width: 80vw;
+    min-width: 17rem;
   }
 }
 main .panel-agenda .flip-card-back {
@@ -409,19 +410,20 @@ main .panel-agenda .flip-card-back {
 }
 main .panel-agenda .flip-card-back iframe {
   width: calc((75vh - 7.5rem)/ 1.25);
-  min-width: 15vw;
-  max-width: 25vw;
+  max-width: 23vw;
   border-radius: 0.5rem;
   height: 55%;
 }
 @media only screen and (min-width: 576px) and (max-width: 767.999px) {
   main .panel-agenda .flip-card-back iframe {
     max-width: 55vw;
+    min-width: 17rem;
   }
 }
 @media only screen and (max-width: 575.999px) {
   main .panel-agenda .flip-card-back iframe {
     max-width: 80vw;
+    min-width: 17rem;
   }
 }
 main .panel-agenda .flip-card-back p {
@@ -462,6 +464,7 @@ main .panel-agenda .flip-card-back button {
   }
 }
 main .panel-agenda .flip-card-back button:hover {
+  background: rgba(152, 45, 55, 0.85);
   color: #f3be4f;
   border: 1px solid #f3be4f;
   border-bottom: 0.25rem solid #f3be4f;
@@ -521,7 +524,7 @@ main .panel-agenda .flip-card-back button:hover {
 .sub-panel-discos-externo .sub-panel-discos .titulo-album {
   grid-column: 1/span 2;
 }
-@media only screen and (max-width: 767.999px) and (orientation: portrait) {
+@media only screen and (max-width: 767.999px) {
   .sub-panel-discos-externo .sub-panel-discos .titulo-album {
     grid-column: 1/2;
   }
@@ -561,7 +564,6 @@ main .panel-agenda .flip-card-back button:hover {
   }
 }
 
-/* Finaliza estilos de todas los elementos de todos los html */
 /* Empieza estilos de las sections de contacto.html */
 .section-contacto {
   padding: 0.5rem 1rem;
@@ -716,7 +718,6 @@ main .panel-agenda .flip-card-back button:hover {
   }
 }
 .div-bio img {
-  /* width: 70%; */
   width: 100%;
   display: block;
   margin: 0 auto 2rem auto;

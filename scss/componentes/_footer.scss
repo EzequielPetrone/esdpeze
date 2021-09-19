@@ -1,7 +1,6 @@
 /* Empieza estilos footer */
 
 footer {
-    // width: 100%;
     background-color: $c-footer;
     color: $c-menu-f;
     @extend %padding-aux;
@@ -9,7 +8,6 @@ footer {
 
     .titulo-footer {
         font-family: nth($fuente, 2);
-        // font-size: 1.75rem;
         font-size: map-get($font-sizes, footer) * 0.8;
         letter-spacing: 0.2rem;
         @extend %padding-aux;
@@ -20,19 +18,23 @@ footer {
         }
     }
 
-    .div-redes a i {
-        font-size: map-get($font-sizes, redes-footer) *0.8;
-        @extend %padding-aux;
-        transition: all 0.5s;
-        transition-timing-function: ease;
+    .div-redes {
+        a {
+            i {
+                font-size: map-get($font-sizes, redes-footer) *0.8;
+                @extend %padding-aux;
+                transition: all 0.5s;
+                transition-timing-function: ease;
 
-        @include responsive(sm_md) {
-            font-size: map-get($font-sizes, redes-footer) * 0.6;
-        }
+                @include responsive(sm_md) {
+                    font-size: map-get($font-sizes, redes-footer) * 0.6;
+                }
 
-        &:hover {
-            color: $c-menu2-f;
-            transform: scale(1.25);
+                &:hover {
+                    color: $c-menu2-f;
+                    transform: scale(1.25);
+                }
+            }
         }
     }
 

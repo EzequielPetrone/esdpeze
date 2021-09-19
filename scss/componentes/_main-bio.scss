@@ -2,8 +2,8 @@
 
 .div-bio {
     p {
-        font-family: nth($fuente,3);
-        font-size: map-get($font-sizes , texto);
+        font-family: nth($fuente, 3);
+        font-size: map-get($font-sizes, texto);
         color: $c-texto;
         text-align: justify;
         padding: 0 0 2rem 0;
@@ -11,15 +11,14 @@
         width: 100%; //El responsive lo hago con Bootstrap
         margin: 0 auto;
         line-height: 2.5rem;
- 
+
         @include responsive(sm_md) {
-            font-size: map-get($font-sizes , texto) * 0.667;
+            font-size: map-get($font-sizes, texto) * 0.667;
             line-height: 1.5rem;
         }
     }
 
     img {
-        /* width: 70%; */
         width: 100%;
         display: block;
         margin: 0 auto 2rem auto;
