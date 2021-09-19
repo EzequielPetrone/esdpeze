@@ -104,46 +104,132 @@ main {
     .panel-agenda {
         width: 100%;
         @include dflex(0, space-evenly, w, center);
-
-        .sub-panel-agenda {
-            @include dflex(c, 0, 0, 0);
-            max-width: calc((60vh - 7.5rem)/ 1.25);
-            min-width: 15vw;
-            /* width: 25vw; */
+        
+        /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+        .flip-card {
+            background-color: transparent;
+            perspective: 600px;
+            /* Remove this if you don't want the 3D effect */
+            margin: 1rem;
+        }
+        
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
             background-color: $c-main;
             padding: 1rem;
-            margin: 1rem;
+            // margin: 1rem;
             border-radius: 1rem;
-            // transition: all 3s;
+        
+            display: flex;
+            justify-content: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card-front {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        
+            img {
+                width: calc((75vh - 7.5rem)/ 1.25);
+                min-width: 15vw;
+                max-width: 25vw;
+                border-radius: 0.5rem;
 
-            &:hover {
-                transform: scale(1.05)
-            }
-
-            img,
-            iframe {
-                width: 100%;
-            }
-
-            @include responsive(md_lg) {
-
-                @include dflex(r, 0, 0, 0);
-
-                max-width: calc((70vh - 5rem));
-                min-width: 50vw;
-
-                img {
-                    width: 60%;
+                @include responsive(md) {
+                    max-width: 55vw
                 }
-
-                iframe {
-                    width: 40%;
+                @include responsive(sm) {
+                    max-width: 80vw
                 }
-            }
-
-            @include responsive(sm) {
-                min-width: 50vw;
             }
         }
+        
+        /* Style the back side */
+        .flip-card-back {
+            @include dflex(c, space-around, 0, center);
+            position: absolute;
+            color: white;
+            transform: rotateY(180deg);
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+            width: 100%;
+            height: 93%;
+        
+            iframe {
+                width: calc((75vh - 7.5rem)/ 1.25);
+                min-width: 15vw;
+                max-width: 25vw;
+                border-radius: 0.5rem;
+                height: 55%;
+
+                @include responsive(md) {
+                    max-width: 55vw
+                }
+                @include responsive(sm) {
+                    max-width: 80vw
+                }
+            }
+        
+            p {
+                font-family: nth($fuente, 3);
+                font-size: map-get($font-sizes, texto) * 0.85;
+                // color: $c-texto;
+                line-height: 2.5rem;
+                text-align: center;
+        
+                // padding: 0 0 2rem 0;
+                span {
+                    font-size: map-get($font-sizes, texto);
+                    letter-spacing: 0.05rem;
+                }
+        
+                @include responsive(sm) {
+                    font-size: map-get($font-sizes, texto) * 0.85 * 0.667;
+                    line-height: 1.5rem;
+        
+                    span {
+                        font-size: map-get($font-sizes, texto) * 0.667;
+                        letter-spacing: 0.03rem;
+                    }
+                }
+            }
+        
+            button {
+                background: rgba(white, 15%);
+                color: white;
+                // border: none;
+                padding: 0.75rem 1.5rem;
+                border: 1px solid white;
+                border-bottom: 0.25rem solid white;
+                border-radius: 0.5rem;
+                font-size: map-get($font-sizes, texto) * 0.85;
+                transition: all .4s;
+                margin: 0.5rem;
+        
+                @include responsive(sm) {
+                    padding: 0.5rem 1rem;
+                    font-size: map-get($font-sizes, texto) * 0.85 * 0.667;
+                }
+        
+                &:hover {
+                    // background: rgba(white, 65%);
+                    color: $c-menu-h;
+                    border: 1px solid $c-menu-h;
+                    border-bottom: 0.25rem solid $c-menu-h;
+        
+                }
+            }
+        }
+        
     }
 }
+
+
+

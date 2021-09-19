@@ -350,43 +350,121 @@ main .panel-agenda {
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  /* This container is needed to position the front and back side */
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  /* Style the back side */
 }
-main .panel-agenda .sub-panel-agenda {
-  display: flex;
-  flex-direction: column;
-  max-width: calc((60vh - 7.5rem)/ 1.25);
-  min-width: 15vw;
-  /* width: 25vw; */
+main .panel-agenda .flip-card {
+  background-color: transparent;
+  perspective: 600px;
+  /* Remove this if you don't want the 3D effect */
+  margin: 1rem;
+}
+main .panel-agenda .flip-card-inner {
   background-color: rgba(0, 0, 0, 0.85);
   padding: 1rem;
-  margin: 1rem;
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
-main .panel-agenda .sub-panel-agenda:hover {
-  transform: scale(1.05);
+main .panel-agenda .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
-main .panel-agenda .sub-panel-agenda img,
-main .panel-agenda .sub-panel-agenda iframe {
-  width: 100%;
+main .panel-agenda .flip-card-front {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
-@media only screen and (min-width: 576px) and (max-width: 991.999px) {
-  main .panel-agenda .sub-panel-agenda {
-    display: flex;
-    flex-direction: row;
-    max-width: calc((70vh - 5rem));
-    min-width: 50vw;
-  }
-  main .panel-agenda .sub-panel-agenda img {
-    width: 60%;
-  }
-  main .panel-agenda .sub-panel-agenda iframe {
-    width: 40%;
+main .panel-agenda .flip-card-front img {
+  width: calc((75vh - 7.5rem)/ 1.25);
+  min-width: 15vw;
+  max-width: 25vw;
+  border-radius: 0.5rem;
+}
+@media only screen and (min-width: 576px) and (max-width: 767.999px) {
+  main .panel-agenda .flip-card-front img {
+    max-width: 55vw;
   }
 }
 @media only screen and (max-width: 575.999px) {
-  main .panel-agenda .sub-panel-agenda {
-    min-width: 50vw;
+  main .panel-agenda .flip-card-front img {
+    max-width: 80vw;
   }
+}
+main .panel-agenda .flip-card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  color: white;
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  width: 100%;
+  height: 93%;
+}
+main .panel-agenda .flip-card-back iframe {
+  width: calc((75vh - 7.5rem)/ 1.25);
+  min-width: 15vw;
+  max-width: 25vw;
+  border-radius: 0.5rem;
+  height: 55%;
+}
+@media only screen and (min-width: 576px) and (max-width: 767.999px) {
+  main .panel-agenda .flip-card-back iframe {
+    max-width: 55vw;
+  }
+}
+@media only screen and (max-width: 575.999px) {
+  main .panel-agenda .flip-card-back iframe {
+    max-width: 80vw;
+  }
+}
+main .panel-agenda .flip-card-back p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.275rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+main .panel-agenda .flip-card-back p span {
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+}
+@media only screen and (max-width: 575.999px) {
+  main .panel-agenda .flip-card-back p {
+    font-size: 0.850425rem;
+    line-height: 1.5rem;
+  }
+  main .panel-agenda .flip-card-back p span {
+    font-size: 1.0005rem;
+    letter-spacing: 0.03rem;
+  }
+}
+main .panel-agenda .flip-card-back button {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid white;
+  border-bottom: 0.25rem solid white;
+  border-radius: 0.5rem;
+  font-size: 1.275rem;
+  transition: all 0.4s;
+  margin: 0.5rem;
+}
+@media only screen and (max-width: 575.999px) {
+  main .panel-agenda .flip-card-back button {
+    padding: 0.5rem 1rem;
+    font-size: 0.850425rem;
+  }
+}
+main .panel-agenda .flip-card-back button:hover {
+  color: #f3be4f;
+  border: 1px solid #f3be4f;
+  border-bottom: 0.25rem solid #f3be4f;
 }
 
 /* Empieza estilos de las sections de disco.html */
