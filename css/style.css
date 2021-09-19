@@ -38,7 +38,7 @@ html {
   scroll-behavior: smooth;
 }
 html body {
-  background-image: url("../images/fondos/patron1_light_2.png");
+  background-image: url("../images/fondos/patron1_light_2.webp");
   background-repeat: repeat;
   /* Esta me pareció la mejor manera de tener el footer abajo de todo
   y que queden todos los html dinámicos: */
@@ -358,7 +358,7 @@ main .panel-agenda .flip-card {
   background-color: transparent;
   perspective: 600px;
   /* Remove this if you don't want the 3D effect */
-  margin: 1rem;
+  margin-bottom: 1rem;
 }
 main .panel-agenda .flip-card-inner {
   background-color: rgba(0, 0, 0, 0.85);
