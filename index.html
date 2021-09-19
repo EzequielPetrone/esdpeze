@@ -39,7 +39,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Linkeo Icons de FontAwesome -->
-    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.7/css/all.css" media="screen"> -->
     <link rel="preload" href="https://pro.fontawesome.com/releases/v5.0.7/css/all.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous" media="screen">
     <noscript>
@@ -48,7 +47,6 @@
     </noscript>
 
     <!-- Linkeo AOS (sirve para ciertas animaciones al scrollear) -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="screen"> -->
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous" media="screen">
     <noscript>
@@ -152,7 +150,13 @@
                 <div data-aos="fade-right" class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="images/agenda/teatrito.webp" alt="Fecha Síndrome de Peter en El Teatrito Flores">
+                            <!-- <img src="images/agenda/teatrito.webp" alt="Fecha Síndrome de Peter en El Teatrito Flores"> -->
+                            <picture>
+                                <source media="(min-width: 425px)" srcset="images/agenda/teatrito.webp">
+                                <source media="(max-width: 424.99px)" srcset="images/agenda/teatrito_sm.webp">
+                                <img src="images/agenda/teatrito.webp"
+                                alt="Fecha Síndrome de Peter en El Teatrito Flores">
+                            </picture>
                         </div>
                         <div class="flip-card-back">
                             <p><span>El Teatrito</span><br> 29 de Junio - 21hs </p>
