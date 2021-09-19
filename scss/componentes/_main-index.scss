@@ -10,26 +10,6 @@ main {
             max-height: calc((100vh + 1rem) - var(--hh));
         }
 
-        @include responsive(port) {
-            .img-portrait {
-                display: block;
-            }
-
-            .img-landscape {
-                display: none;
-            }
-        }
-
-        @include responsive(land) {
-            .img-portrait {
-                display: none;
-            }
-
-            .img-landscape {
-                display: block;
-            }
-        }
-
         .carousel-inner-custom {
             position: relative;
 

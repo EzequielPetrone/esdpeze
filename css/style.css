@@ -280,22 +280,6 @@ main .portada .img-portada {
   min-height: calc(320px / 1.873);
   max-height: calc((100vh + 1rem) - var(--hh));
 }
-@media only screen and (orientation: portrait) {
-  main .portada .img-portrait {
-    display: block;
-  }
-  main .portada .img-landscape {
-    display: none;
-  }
-}
-@media only screen and (orientation: landscape) {
-  main .portada .img-portrait {
-    display: none;
-  }
-  main .portada .img-landscape {
-    display: block;
-  }
-}
 main .portada .carousel-inner-custom {
   position: relative;
 }

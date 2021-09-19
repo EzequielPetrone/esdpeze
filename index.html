@@ -91,19 +91,22 @@
                 <div class="carousel-inner w-100 carousel-inner-custom">
                     <div class="carousel-item active w-100">
                         <div class="w-100 d-flex justify-content-center">
-                            <img src="images/portadas/portada-1.webp" class="img-portada img-landscape"
-                                alt="Portada Síndrome de Peter 1">
-                            <!-- Elijo diferentes imágenes dependiendo si el device está horizontal o vertical -->
-                            <img src="images/portadas/portada-1_P.webp" class="img-portada img-portrait"
-                                alt="Portada Síndrome de Peter 1">
+                            <picture>
+                                <source media="(orientation: portrait)" srcset="images/portadas/portada-1_P.webp">
+                                <source media="(orientation: landscape)" srcset="images/portadas/portada-1.webp">
+                                <img class="img-portada" src="images/portadas/portada-1_P.webp"
+                                    alt="Portada Síndrome de Peter">
+                            </picture>
                         </div>
                     </div>
                     <div class="carousel-item w-100">
                         <div class="w-100 d-flex justify-content-center">
-                            <img src="images/portadas/show_reina_1.webp" class="img-portada img-landscape"
-                                alt="Portada Síndrome de Peter 2">
-                            <img src="images/portadas/show_reina_1_P.webp" class="img-portada img-portrait"
-                                alt="Portada Síndrome de Peter 2">
+                            <picture>
+                                <source media="(orientation: portrait)" srcset="images/portadas/show_reina_1_P.webp">
+                                <source media="(orientation: landscape)" srcset="images/portadas/show_reina_1.webp">
+                                <img class="img-portada" src="images/portadas/show_reina_1_P.webp"
+                                    alt="Portada 2 Síndrome de Peter">
+                            </picture>
                         </div>
                     </div>
 
