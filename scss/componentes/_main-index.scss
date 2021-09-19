@@ -182,7 +182,7 @@ main {
             }
 
             button {
-                background: rgba(white, 15%);
+                background: rgba(white, 20%);
                 color: white;
                 padding: 0.75rem 1.5rem;
                 border: 1px solid white;
@@ -198,7 +198,8 @@ main {
                 }
 
                 &:hover {
-                    background: rgba($c-ppal, 85%);
+                    // background: rgba($c-ppal, 85%);
+                    background: rgba(white, 10%);
                     color: $c-menu-h;
                     border: 1px solid $c-menu-h;
                     border-bottom: 0.25rem solid $c-menu-h;
