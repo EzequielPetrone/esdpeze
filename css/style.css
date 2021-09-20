@@ -1,9 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 *:before, *:after, * {
   padding: 0;
   margin: 0;
@@ -14,7 +9,6 @@ footer .final-footer .firma-footer, footer .final-footer .volver-arriba, footer 
   padding: 0.5rem;
 }
 
-/* Importo fuentes API Google */
 :root {
   /*Lo uso para tener en cuenta la altura del header a definir el tamaño de ciertos elementos*/
   --hh: 7.5rem;
@@ -248,7 +242,6 @@ footer .final-footer {
 footer .final-footer .volver-arriba {
   right: 1rem;
   border-radius: 50%;
-  width: fit-content;
 }
 footer .final-footer .volver-arriba a {
   font-size: 0;
@@ -358,8 +351,8 @@ main .panel-agenda .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 main .panel-agenda .flip-card-front {
-  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 main .panel-agenda .flip-card-front img {
   width: calc((75vh - 7.5rem)/ 1.25);
@@ -629,9 +622,9 @@ main .panel-agenda .flip-card-back button:hover {
 .section-contacto .panel-contacto .form-style-7 ul li input[type=email],
 .section-contacto .panel-contacto .form-style-7 ul li textarea,
 .section-contacto .panel-contacto .form-style-7 ul li select {
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   display: block;
   outline: none;

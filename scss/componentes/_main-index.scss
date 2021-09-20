@@ -109,8 +109,9 @@ main {
         }
 
         .flip-card-front {
-            backface-visibility: hidden;
+            
             -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 
             img {
                 width: calc((75vh - 7.5rem)/ 1.25);
